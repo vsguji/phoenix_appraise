@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:phoenix_base/phoenix.dart';
 
+import 'appraise_interface.dart';
+
 /// 描述: 评价组件title
 class AppraiseHeader extends StatelessWidget {
   /// 是否显示标题，默认为 true，显示
@@ -13,7 +15,7 @@ class AppraiseHeader extends StatelessWidget {
   final int maxLines;
 
   /// 标题类型，默认 [BrnAppraiseHeaderType.spaceBetween]
-  final BrnAppraiseHeaderType headerType;
+  final AppraiseHeaderType headerType;
 
   /// 标题的 padding，为 null 时为默认 padding。
   /// headerType 为 spaceBetween 时默认为 EdgeInsets.only(left: 20, top: 16, right: 16, bottom: 20)
@@ -28,7 +30,7 @@ class AppraiseHeader extends StatelessWidget {
       this.showHeader = true,
       this.title = '',
       this.maxLines = 1,
-      this.headerType = BrnAppraiseHeaderType.spaceBetween,
+      this.headerType = AppraiseHeaderType.spaceBetween,
       this.headPadding,
       this.cancelCallBack})
       : super(key: key);
@@ -36,9 +38,9 @@ class AppraiseHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (showHeader) {
-      if (headerType == BrnAppraiseHeaderType.spaceBetween) {
+      if (headerType == AppraiseHeaderType.spaceBetween) {
         return _spaceHeader(context);
-      } else if (headerType == BrnAppraiseHeaderType.center) {
+      } else if (headerType == AppraiseHeaderType.center) {
         return _centerHeader();
       }
     }
@@ -108,7 +110,7 @@ class AppraiseHeader extends StatelessWidget {
 }
 
 /// title类型
-enum BrnAppraiseHeaderType {
+enum AppraiseHeaderType {
   /// 居中
   center,
 

@@ -5,7 +5,7 @@ import 'package:phoenix_picker/phoenix_picker.dart';
 /// 描述: 标签组，支持多选
 
 /// 标签组的样式
-enum BrnMultiSelectStyle {
+enum MultiSelectStyle {
   /// 等分布局
   average,
 
@@ -15,13 +15,13 @@ enum BrnMultiSelectStyle {
 
 /// 获取tag显示的内容
 /// data tag对应的数据模型，根据data获取tag显示的内容
-typedef BrnMultiSelectTagText<V> = String Function(V data);
+typedef MultiSelectTagText<V> = String Function(V data);
 
 ///提交按钮事件回调
-typedef BrnMultiSelectedTagsCallback = void Function(
+typedef MultiSelectedTagsCallback = void Function(
     List<BrnTagItemBean> selectedTags);
 
-class BrnMultiSelectTags extends StatefulWidget {
+class MultiSelectTags extends StatefulWidget {
   ///当点击到最大数目时的点击事件
   final VoidCallback? onMaxSelectClick;
 
@@ -35,10 +35,10 @@ class BrnMultiSelectTags extends StatefulWidget {
   final BrnTagsPickerConfig tagPickerBean;
 
   /// 获取tag显示文案
-  final BrnMultiSelectTagText<BrnTagItemBean> tagText;
+  final MultiSelectTagText<BrnTagItemBean> tagText;
 
   /// 已选中列表
-  final BrnMultiSelectedTagsCallback? selectedTagsCallback;
+  final MultiSelectedTagsCallback? selectedTagsCallback;
 
   /// 没有数据时的样式
   final Widget? emptyWidget;
@@ -47,7 +47,7 @@ class BrnMultiSelectTags extends StatefulWidget {
   final EdgeInsets padding;
 
   ///是等分样式还是流式布局样式 默认等分
-  final BrnMultiSelectStyle tagStyle;
+  final MultiSelectStyle tagStyle;
 
   /// 是否为多选
   final bool multiSelect;
@@ -59,14 +59,14 @@ class BrnMultiSelectTags extends StatefulWidget {
   final double minWidth;
 
   /// create BrnMultiSelectTags
-  BrnMultiSelectTags({
+  MultiSelectTags({
     Key? key,
     required this.tagPickerBean,
     required this.tagText,
     this.onMaxSelectClick,
     this.maxSelectItemCount = 0,
     this.brnCrossAxisCount = 2,
-    this.tagStyle = BrnMultiSelectStyle.average,
+    this.tagStyle = MultiSelectStyle.average,
     this.selectedTagsCallback,
     this.emptyWidget,
     this.padding = const EdgeInsets.symmetric(horizontal: 20),
@@ -76,10 +76,10 @@ class BrnMultiSelectTags extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _BrnMultiSelectTagsState createState() => _BrnMultiSelectTagsState();
+  _MultiSelectTagsState createState() => _MultiSelectTagsState();
 }
 
-class _BrnMultiSelectTagsState extends State<BrnMultiSelectTags> {
+class _MultiSelectTagsState extends State<MultiSelectTags> {
   /// 操作类型属性
   List<BrnTagItemBean> _selectedTags = [];
   List<BrnTagItemBean> _sourceTags = [];
@@ -106,7 +106,7 @@ class _BrnMultiSelectTagsState extends State<BrnMultiSelectTags> {
   }
 
   Widget _buildContent(BuildContext context) {
-    if (widget.tagStyle == BrnMultiSelectStyle.average) {
+    if (widget.tagStyle == MultiSelectStyle.average) {
       return _buildGridViewWidget(context);
     } else {
       return _buildWrapViewWidget(context);
@@ -233,7 +233,7 @@ class _BrnMultiSelectTagsState extends State<BrnMultiSelectTags> {
         decoration: BoxDecoration(
             color: bgColor, borderRadius: BorderRadius.circular(3.0)),
         padding: padding,
-        alignment: widget.tagStyle == BrnMultiSelectStyle.average
+        alignment: widget.tagStyle == MultiSelectStyle.average
             ? Alignment.center
             : null,
         child: Text(

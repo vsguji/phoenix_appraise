@@ -1,8 +1,17 @@
+/*
+ * @Author: lipeng 1162423147@qq.com
+ * @Date: 2023-09-13 20:09:03
+ * @LastEditors: lipeng 1162423147@qq.com
+ * @LastEditTime: 2023-09-24 22:09:35
+ * @FilePath: /phoenix_appraise/lib/appraise_config.dart
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import 'package:flutter/material.dart';
-import 'package:bruno/src/components/input/brn_input_text.dart';
-import 'package:bruno/src/components/appraise/brn_appraise_interface.dart';
+import 'package:phoenix_input/phoenix_input.dart';
 
-class BrnAppraiseConfig {
+import 'appraise_interface.dart';
+
+class AppraiseConfig {
   /// 是否显示标题和关闭
   final bool showHeader;
 
@@ -13,7 +22,7 @@ class BrnAppraiseConfig {
   final int titleMaxLines;
 
   /// 取消的回调
-  final BrnAppraiseCloseClickCallBack? onCancel;
+  final AppraiseCloseClickCallBack? onCancel;
 
   /// 所需表情包的index列表，index最大值为4
   final List<int> indexes;
@@ -55,16 +64,16 @@ class BrnAppraiseConfig {
   final bool? isConfirmButtonEnabled;
 
   /// 点击icon的回调
-  final BrnAppraiseIconClick? iconClickCallback;
+  final AppraiseIconClick? iconClickCallback;
 
   /// 输入框改变的回调
-  final BrnInputTextChangeCallback? inputTextChangeCallback;
+  final InputTextChangeCallback? inputTextChangeCallback;
 
   /// 选择标签的回调
-  final BrnAppraiseTagClick? tagSelectCallback;
+  final AppraiseTagClick? tagSelectCallback;
 
   /// create BrnAppraiseConfig
-  const BrnAppraiseConfig({
+  const AppraiseConfig({
     this.showHeader = true,
     this.headerPadding,
     this.titleMaxLines = 1,
@@ -89,7 +98,7 @@ class BrnAppraiseConfig {
 }
 
 /// 评价组件类型
-enum BrnAppraiseType {
+enum AppraiseType {
   /// 表情包评价组件
   emoji,
 

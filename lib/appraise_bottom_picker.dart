@@ -1,22 +1,23 @@
-import 'package:bruno/src/components/appraise/brn_appraise.dart';
-import 'package:bruno/src/components/appraise/brn_appraise_header.dart';
-import 'package:bruno/src/components/appraise/brn_appraise_config.dart';
-import 'package:bruno/src/l10n/brn_intl.dart';
 import 'package:flutter/material.dart';
-import 'package:bruno/src/components/appraise/brn_appraise_interface.dart';
+import 'package:phoenix_base/phoenix.dart';
+
+import 'appraise.dart';
+import 'appraise_config.dart';
+import 'appraise_header.dart';
+import 'appraise_interface.dart';
 
 /// 描述: 评价组件bottom picker，
 /// 对BrnAppraise做了一层封装，可直接使用在showDialog里面
 
-class BrnAppraiseBottomPicker extends StatefulWidget {
+class AppraiseBottomPicker extends StatefulWidget {
   /// 标题
   final String title;
 
   /// 标题类型
-  final BrnAppraiseHeaderType headerType;
+  final AppraiseHeaderType headerType;
 
   /// 评分组件类型，分为表情包和星星，默认星星
-  final BrnAppraiseType type;
+  final AppraiseType type;
 
   /// 自定义文案
   /// 若评分组件为表情，则list长度为5，不足5个时请在对应位置补空字符串
@@ -30,30 +31,29 @@ class BrnAppraiseBottomPicker extends StatefulWidget {
   final String inputHintText;
 
   /// 提交按钮的点击回调
-  final BrnAppraiseConfirmClick? onConfirm;
+  final AppraiseConfirmClick? onConfirm;
 
   /// 评价组件的配置项
-  final BrnAppraiseConfig config;
+  final AppraiseConfig config;
 
   /// create BrnAppraiseBottomPicker
-  BrnAppraiseBottomPicker({
+  AppraiseBottomPicker({
     Key? key,
     this.title = '',
-    this.headerType = BrnAppraiseHeaderType.spaceBetween,
-    this.type = BrnAppraiseType.star,
+    this.headerType = AppraiseHeaderType.spaceBetween,
+    this.type = AppraiseType.star,
     this.iconDescriptions,
     this.tags,
     this.inputHintText = '',
     this.onConfirm,
-    this.config = const BrnAppraiseConfig(),
+    this.config = const AppraiseConfig(),
   }) : super(key: key);
 
   @override
-  _BrnAppraiseBottomPickerState createState() =>
-      _BrnAppraiseBottomPickerState();
+  _AppraiseBottomPickerState createState() => _AppraiseBottomPickerState();
 }
 
-class _BrnAppraiseBottomPickerState extends State<BrnAppraiseBottomPicker> {
+class _AppraiseBottomPickerState extends State<AppraiseBottomPicker> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,12 +61,12 @@ class _BrnAppraiseBottomPickerState extends State<BrnAppraiseBottomPicker> {
       backgroundColor: Color(0x99000000),
       body: Container(
         alignment: Alignment.bottomCenter,
-        child: BrnAppraise(
+        child: Appraise(
           title: widget.title,
           headerType: widget.headerType,
           type: widget.type,
-          iconDescriptions:
-              widget.iconDescriptions ?? BrnIntl.of(context).localizedResource.appriseLevel,
+          iconDescriptions: widget.iconDescriptions ??
+              BrnIntl.of(context).localizedResource.appriseLevel,
           tags: widget.tags,
           inputHintText: widget.inputHintText,
           onConfirm: (index, list, input) {
