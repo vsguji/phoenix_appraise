@@ -1,5 +1,5 @@
 name: phoenix_appraise
-description: A new Flutter package project.
+description: phoenix 将做为企业级基础组件:Appraise,提供项目支持。
 version: 1.0.0
 homepage: 'https://github.com/vsguji/phoenix_appraise.git'
 
@@ -10,7 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  phoenix_base: ^1.0.7
+  phoenix_input: ^1.0.1
+  phoenix_btn: ^1.0.1
+  bindings_compatible: ^1.0.1
+  phoenix_picker: ^1.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

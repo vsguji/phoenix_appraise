@@ -1,7 +1,11 @@
-<<<<<<< HEAD
-# phoenix_appraise
-Flutter 企业级组件: appraise
-=======
+<!--
+ * @Author: lipeng 1162423147@qq.com
+ * @Date: 2023-09-24 21:48:33
+ * @LastEditors: lipeng 1162423147@qq.com
+ * @LastEditTime: 2023-09-24 21:50:47
+ * @FilePath: /phoenix_appraise/README.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <!--
 This README describes the package. If you publish this package to pub.dev,
 this README's contents appear on the landing page for your package.
@@ -15,22 +19,19 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+phoenix 将做为企业级基础组件:Appraise,提供项目支持。
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+phoenix 将做为企业级基础组件:Appraise,提供项目支持。
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+phoenix 将做为企业级基础组件:Appraise,提供项目支持。
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+phoenix 将做为企业级基础组件:Appraise,提供项目支持。
 
 ```dart
 const like = 'sample';
@@ -38,7 +39,5 @@ const like = 'sample';
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
->>>>>>> d214786 ([new] 新建)
+phoenix 将做为企业级基础组件:Appraise,提供项目支持。
+
