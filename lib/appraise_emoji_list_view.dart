@@ -2,7 +2,7 @@
  * @Author: lipeng 1162423147@qq.com
  * @Date: 2023-09-13 20:09:03
  * @LastEditors: lipeng 1162423147@qq.com
- * @LastEditTime: 2023-09-24 22:09:43
+ * @LastEditTime: 2023-09-29 10:01:45
  * @FilePath: /phoenix_appraise/lib/appraise_emoji_list_view.dart
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -19,6 +19,7 @@ import 'package:phoenix_base/phoenix.dart';
 
 import 'appraise_emoji_item.dart';
 import 'appraise_interface.dart';
+import 'extension/appraise_assets.dart';
 
 /// 描述: 表情评价列表
 ///       最多支持5个表情，默认也是5个，支持选择任意个数，
@@ -44,36 +45,35 @@ class AppraiseEmojiListView extends StatefulWidget {
   }
 
   @override
-  _AppraiseEmojiListViewState createState() =>
-      _AppraiseEmojiListViewState();
+  _AppraiseEmojiListViewState createState() => _AppraiseEmojiListViewState();
 }
 
 class _AppraiseEmojiListViewState extends State<AppraiseEmojiListView> {
   /// 未选中表情，灰色
   final List _unselectedIcons = [
-    BaseAsset.iconAppraiseBadUnselected,
-    BaseAsset.iconAppraiseNotGoodUnselected,
-    BaseAsset.iconAppraiseOkUnselected,
-    BaseAsset.iconAppraiseGoodUnselected,
-    BaseAsset.iconAppraiseSurpriseUnselected,
+    AppraiseAssets.iconAppraiseBadUnselected,
+    AppraiseAssets.iconAppraiseNotGoodUnselected,
+    AppraiseAssets.iconAppraiseOkUnselected,
+    AppraiseAssets.iconAppraiseGoodUnselected,
+    AppraiseAssets.iconAppraiseSurpriseUnselected,
   ];
 
   /// 默认表情，黄色
   final List _defaultIcons = [
-    BaseAsset.iconAppraiseBadDefault,
-    BaseAsset.iconAppraiseNotGoodDefault,
-    BaseAsset.iconAppraiseOkDefault,
-    BaseAsset.iconAppraiseGoodDefault,
-    BaseAsset.iconAppraiseSurpriseDefault,
+    AppraiseAssets.iconAppraiseBadDefault,
+    AppraiseAssets.iconAppraiseNotGoodDefault,
+    AppraiseAssets.iconAppraiseOkDefault,
+    AppraiseAssets.iconAppraiseGoodDefault,
+    AppraiseAssets.iconAppraiseSurpriseDefault,
   ];
 
   /// 选中表情，gif
   final List _selectedIcons = [
-    BaseAsset.iconAppraiseBadSelected,
-    BaseAsset.iconAppraiseNotGoodSelected,
-    BaseAsset.iconAppraiseOkSelected,
-    BaseAsset.iconAppraiseGoodSelected,
-    BaseAsset.iconAppraiseSurpriseSelected,
+    AppraiseAssets.iconAppraiseBadSelected,
+    AppraiseAssets.iconAppraiseNotGoodSelected,
+    AppraiseAssets.iconAppraiseOkSelected,
+    AppraiseAssets.iconAppraiseGoodSelected,
+    AppraiseAssets.iconAppraiseSurpriseSelected,
   ];
 
   int _selectedIndex = -1;
