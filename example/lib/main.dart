@@ -67,6 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+
+    /// 1
     AppraiseBottomPicker bottomPicker = AppraiseBottomPicker(
       title: '选择器',
       tags: const [
@@ -76,7 +78,23 @@ class _MyHomePageState extends State<MyHomePage> {
         'tag04',
       ],
     );
-    showDialog(context: context, builder: (ctx) => bottomPicker);
+    // showDialog(context: context, builder: (ctx) => bottomPicker);
+
+    ///
+    AppraiseEmojiListView emojiListView = AppraiseEmojiListView(
+      indexes: const [0, 1, 2, 3, 4],
+      titles: const ['1', '2', '3', '4', '5'],
+    );
+    // showDialog(
+    //   context: context,
+    //   builder: (context) => emojiListView,
+    // );
+
+    AppraiseStarListView starListView = AppraiseStarListView(
+      titles: ['1', '2', '3'],
+      count: 3,
+    );
+    showDialog(context: context, builder: (context) => starListView);
   }
 
   @override
@@ -123,6 +141,14 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            AppraiseStarListView(
+              titles: ['1', '2', '3'],
+              count: 3,
+            ),
+            AppraiseEmojiListView(
+              indexes: const [0, 1, 2, 3, 4],
+              titles: const ['1', '2', '3', '4', '5'],
+            )
           ],
         ),
       ),

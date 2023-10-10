@@ -59,7 +59,7 @@ class _AppraiseStarListViewState extends State<AppraiseStarListView> {
       }
       if (subTitle?.isNotEmpty ?? false) {
         subWidget = Padding(
-          padding: EdgeInsets.only(top: 8),
+          padding: const EdgeInsets.only(top: 8),
           child: Text(
             subTitle ?? '',
             style: TextStyle(
@@ -86,7 +86,7 @@ class _AppraiseStarListViewState extends State<AppraiseStarListView> {
     for (int i = 0; i < widget.count; i++) {
       Widget item = GestureDetector(
         child: Padding(
-          padding: EdgeInsets.only(left: 6, right: 6, top: 4),
+          padding: const EdgeInsets.only(left: 6, right: 6, top: 4),
           child: (i <= _selectedIndex) ? _selectedStar : _star,
         ),
         onTap: () {

@@ -68,20 +68,20 @@ class _AppraiseEmojiItemState extends State<AppraiseEmojiItem>
     _selectedIndex = widget.selectedIndex;
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 1000),
-      reverseDuration: Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 1000),
+      reverseDuration: const Duration(milliseconds: 1000),
     );
     _gif = GifImage(
       controller: _controller,
       image: AssetImage(widget.selectedName,
-          package: BaseStrings.flutterPackageName),
+          package: 'phoenix_appraise'), //BaseStrings.flutterPackageName
       width: 34,
       height: 34,
       defaultImage: Image.asset(
         widget.defaultName,
         width: 34,
         height: 34,
-        package: BaseStrings.flutterPackageName,
+        package: 'phoenix_appraise', //BaseStrings.flutterPackageName,
         gaplessPlayback: true,
       ),
     );
@@ -104,13 +104,13 @@ class _AppraiseEmojiItemState extends State<AppraiseEmojiItem>
           children: <Widget>[
             _getIcon(),
             Padding(
-              padding: EdgeInsets.only(top: 6),
+              padding: const EdgeInsets.only(top: 6),
               child: Text(
                 widget.title ?? '',
                 style: TextStyle(
                   color: widget.index == widget.selectedIndex
-                      ? Color(0xffffc300)
-                      : Color(0xff999999),
+                      ? const Color(0xffffc300)
+                      : const Color(0xff999999),
                   fontSize: 12.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -137,7 +137,7 @@ class _AppraiseEmojiItemState extends State<AppraiseEmojiItem>
         _selectedIndex == -1 ? widget.defaultName : widget.unselectedName,
         width: 34,
         height: 34,
-        package: BaseStrings.flutterPackageName,
+        package: 'phoenix_appraise', // BaseStrings.flutterPackageName,
         gaplessPlayback: true,
       );
     } else {

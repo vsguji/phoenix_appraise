@@ -23,10 +23,10 @@ class Appraise extends StatefulWidget {
   /// 标题
   final String title;
 
-  /// 标题类型，取值[BrnAppraiseHeaderType]
+  /// 标题类型，取值[AppraiseHeaderType]
   /// center 标题居中
   /// spaceBetween 标题和关闭居于两侧
-  /// 默认值BrnAppraiseHeaderType.spaceBetween
+  /// 默认值AppraiseHeaderType.spaceBetween
   final AppraiseHeaderType headerType;
 
   /// 评分组件类型，取值[BrnAppraiseType]

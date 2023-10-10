@@ -15,7 +15,7 @@ class AppraiseHeader extends StatelessWidget {
   /// 标题最大行数，默认为 1
   final int maxLines;
 
-  /// 标题类型，默认 [BrnAppraiseHeaderType.spaceBetween]
+  /// 标题类型，默认 [AppraiseHeaderType.spaceBetween]
   final AppraiseHeaderType headerType;
 
   /// 标题的 padding，为 null 时为默认 padding。
