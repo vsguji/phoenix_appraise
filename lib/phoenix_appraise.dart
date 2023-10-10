@@ -9,7 +9,7 @@
 library phoenix_appraise;
 
 export 'appraise_bottom_picker.dart';
-export 'appraise_config.dart';
+export 'config/appraise_config.dart';
 export 'appraise_emoji_item.dart';
 export 'appraise_emoji_list_view.dart';
 export 'appraise_header.dart';

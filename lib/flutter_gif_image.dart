@@ -50,7 +50,8 @@ class GifImage extends StatefulWidget {
 }
 
 class GifImageState extends State<GifImage> {
-  ValueNotifier<List<ImageInfo>> _images = ValueNotifier<List<ImageInfo>>([]);
+  final ValueNotifier<List<ImageInfo>> _images =
+      ValueNotifier<List<ImageInfo>>([]);
   double _curValue = 0.0;
 
   @override

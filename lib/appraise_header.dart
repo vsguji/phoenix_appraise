@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:phoenix_base/phoenix.dart';
 
 import 'appraise_interface.dart';
+import 'extension/appraise_assets.dart';
 
 /// 描述: 评价组件title
 class AppraiseHeader extends StatelessWidget {
@@ -70,14 +71,14 @@ class AppraiseHeader extends StatelessWidget {
       height: 38 + maxLines * 22.0,
       child: Padding(
         padding: headPadding ??
-            EdgeInsets.only(left: 20, top: 16, right: 16, bottom: 20),
+            const EdgeInsets.only(left: 20, top: 16, right: 16, bottom: 20),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Expanded(
               child: Padding(
-                padding: EdgeInsets.only(top: 4, right: 12),
+                padding: const EdgeInsets.only(top: 4, right: 12),
                 child: Text(
                   title,
                   maxLines: maxLines,
@@ -100,7 +101,7 @@ class AppraiseHeader extends StatelessWidget {
                 }
                 Navigator.of(context).pop();
               },
-              child: PhoenixTools.getAssetImage(BaseAsset.iconPickerClose),
+              child: PhoenixTools.getAssetImage(AppraiseAssets.iconPickerClose),
             ),
           ],
         ),

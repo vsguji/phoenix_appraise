@@ -4,7 +4,7 @@ import 'package:phoenix_btn/phoenix_btn.dart';
 import 'package:phoenix_input/phoenix_input.dart';
 import 'package:phoenix_picker/phoenix_picker.dart';
 
-import 'appraise_config.dart';
+import 'config/appraise_config.dart';
 import 'appraise_emoji_list_view.dart';
 import 'appraise_header.dart';
 import 'appraise_interface.dart';
@@ -15,8 +15,8 @@ import 'mulit_select_tags.dart';
 /// 描述: 评价组件
 /// 1. 支持表情包和星星两种
 /// 2. 最多支持5个表情和5颗星
-/// 3. 支持自定义title，标签等，在BrnAppraiseConfig里配置
-/// 4. 可以用在页面里面也可以使用在弹窗里面，使用在底部弹窗的参考[BrnAppraiseBottomPicker]
+/// 3. 支持自定义title，标签等，在AppraiseConfig里配置
+/// 4. 可以用在页面里面也可以使用在弹窗里面，使用在底部弹窗的参考[AppraiseBottomPicker]
 /// /// /// /// /// /// /// /// /// /
 
 class Appraise extends StatefulWidget {

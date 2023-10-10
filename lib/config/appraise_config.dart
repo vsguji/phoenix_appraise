@@ -9,7 +9,7 @@
 import 'package:flutter/material.dart';
 import 'package:phoenix_input/phoenix_input.dart';
 
-import 'appraise_interface.dart';
+import '../appraise_interface.dart';
 
 class AppraiseConfig {
   /// 是否显示标题和关闭

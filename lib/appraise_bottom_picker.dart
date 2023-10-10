@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:phoenix_base/phoenix.dart';
 
 import 'appraise.dart';
-import 'appraise_config.dart';
+import 'config/appraise_config.dart';
 import 'appraise_header.dart';
 import 'appraise_interface.dart';
 
 /// 描述: 评价组件bottom picker，
-/// 对BrnAppraise做了一层封装，可直接使用在showDialog里面
+/// 对Appraise做了一层封装，可直接使用在showDialog里面
 
 class AppraiseBottomPicker extends StatefulWidget {
   /// 标题
@@ -58,7 +58,7 @@ class _AppraiseBottomPickerState extends State<AppraiseBottomPicker> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: Color(0x99000000),
+      backgroundColor: const Color(0x99000000),
       body: Container(
         alignment: Alignment.bottomCenter,
         child: Appraise(
