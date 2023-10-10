@@ -1,6 +1,6 @@
 name: phoenix_appraise
 description: phoenix 将做为企业级基础组件:Appraise,提供项目支持。
-version: 1.0.3
+version: 1.0.4
 homepage: 'https://github.com/vsguji/phoenix_appraise.git'
 
 environment:
