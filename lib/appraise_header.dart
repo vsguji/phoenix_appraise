@@ -101,7 +101,8 @@ class AppraiseHeader extends StatelessWidget {
                 }
                 Navigator.of(context).pop();
               },
-              child: PhoenixTools.getAssetImage(AppraiseAssets.iconPickerClose),
+              child: PhoenixTools.getAssetImage(AppraiseAssets.iconPickerClose,
+                  package: 'phoenix_appraise'),
             ),
           ],
         ),
