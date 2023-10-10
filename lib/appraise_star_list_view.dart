@@ -2,7 +2,7 @@
  * @Author: lipeng 1162423147@qq.com
  * @Date: 2023-08-31 14:41:55
  * @LastEditors: lipeng 1162423147@qq.com
- * @LastEditTime: 2023-10-10 12:56:40
+ * @LastEditTime: 2023-10-10 13:01:33
  * @FilePath: /phoenix_appraise/lib/appraise_star_list_view.dart
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -41,8 +41,9 @@ class _AppraiseStarListViewState extends State<AppraiseStarListView> {
       gaplessPlayback: true, package: 'phoenix_appraise');
 
   final Image _selectedStar = PhoenixTools.getAssetImage(
-      BaseAsset.iconStarSizeSelected,
-      gaplessPlayback: true);
+      AppraiseAssets.iconStarSizeSelected,
+      gaplessPlayback: true,
+      package: 'phoenix_appraise');
 
   int _selectedIndex = -1;
 
