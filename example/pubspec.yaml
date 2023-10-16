@@ -33,6 +33,9 @@ dependencies:
 
   phoenix_appraise: 
     path: ../
+  phoenix_navbar: ^1.0.4
+  phoenix_toast: ^1.0.1
+  phoenix_btn: ^1.0.8
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
